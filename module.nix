@@ -1,4 +1,4 @@
-self:
+{ self, inputs }:
 {
   config,
   pkgs,
@@ -18,7 +18,7 @@ let
     lib.pipe
       (pkgs.runCommand "generate-ninb-theme" { } ''
         cat ${config.lib.stylix.colors.outPath} | ${
-          lib.getExe' self.packages.${pkgs.system}.default "serializer"
+          lib.getExe' self.packages.${pkgs.stdenv.hostPlatform.system}.default "serializer"
         } > $out
       '')
       [
@@ -29,6 +29,13 @@ in
 {
   options.programs.ninjabrain-bot = {
     enable = lib.mkEnableOption "ninjabrain-bot";
+    package =
+      lib.mkPackageOption inputs.mcsr-nixos.packages.${pkgs.stdenv.hostPlatform.system} "ninjabrain-bot"
+        {
+          extraDescription = "Default's to uku's ninjabrain-bot package. Setting to null will skip installing the package.";
+          nullable = true;
+        };
+
     stylix = lib.mkEnableOption "style ninjabrain bot";
 
     additional_custom_themes = lib.mkOption {
@@ -248,6 +255,10 @@ in
       + ''
         </map>
       '';
+    })
+
+    (lib.mkIf (!(builtins.isNull cfg.package)) {
+      home.packages = [ cfg.package ];
     })
   ];
 }

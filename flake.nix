@@ -10,6 +10,10 @@
     fenix.inputs.nixpkgs.follows = "nixpkgs";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     home-manager.url = "github:nix-community/home-manager";
+    mcsr-nixos = {
+      url = "https://git.uku3lig.net/uku/mcsr-nixos/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -33,7 +37,7 @@
       ];
       systems = import systems;
 
-      flake.homeModules.default = import ./module.nix self;
+      flake.homeModules.default = import ./module.nix { inherit self inputs; };
 
       perSystem =
         {
@@ -71,7 +75,7 @@
                 modules = inputs.home-manager.lib.homeManagerConfiguration {
                   inherit pkgs;
                   modules = [
-                    (import ./module.nix self)
+                    (import ./module.nix { inherit self inputs; })
                     {
                       home = {
                         username = "user";
