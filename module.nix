@@ -32,17 +32,19 @@ in
     stylix = lib.mkEnableOption "style ninjabrain bot";
 
     additional_custom_themes = lib.mkOption {
-      type = lib.types.listOf lib.types.attrsOf (
-        lib.types.submodule {
-          options = {
-            name = lib.mkOption {
-              type = lib.types.strMatching "^[^.]*$";
+      type = lib.types.listOf (
+        lib.types.attrsOf (
+          lib.types.submodule {
+            options = {
+              name = lib.mkOption {
+                type = lib.types.strMatching "^[^.]*$";
+              };
+              value = lib.mkOption {
+                type = lib.types.strMatching "^[^.]*$";
+              };
             };
-            value = lib.mkOption {
-              type = lib.types.strMatching "^[^.]*$";
-            };
-          };
-        }
+          }
+        )
       );
       default = [ ];
       description = "List of custom theme strings. Ninjabrain bot seperates these by a `.`";
@@ -73,7 +75,7 @@ in
             custom_themes_names = lib.mkOption {
               type = lib.types.str;
               default = (
-                lib.join "." ((map (x: x.name) cfg.additional_custom_themes) ++ (lib.optional "Stylix"))
+                lib.join "." ((map (x: x.name) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix "Stylix"))
               );
             };
 
@@ -135,7 +137,7 @@ in
             };
 
             crosshair_correction = lib.mkOption {
-              type = lib.types.numbers.between - 1 1;
+              type = lib.types.numbers.between (-1) 1;
               default = 0;
             };
 
