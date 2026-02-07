@@ -51,7 +51,7 @@
             craneLib = (crane.mkLib pkgs).overrideToolchain config._module.args.toolchain.toolchain;
 
             commonArgs = {
-              src = craneLib.cleanCargoSource ./serializer;
+              src = craneLib.cleanCargoSource ./.;
               strictDeps = true;
             };
 
@@ -62,8 +62,6 @@
             default = craneLib.buildPackage (
               commonArgs
               // {
-                src = craneLib.cleanCargoSource ./serializer;
-                strictDeps = true;
                 cargoArtifacts = craneLib.buildDepsOnly commonArgs;
               }
             );
