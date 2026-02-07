@@ -1,0 +1,18 @@
+[package]
+name = "serializer"
+version = "0.1.0"
+edition = "2024"
+
+[lints.clippy]
+pedantic = { level = "deny", priority = -1 }
+missing_const_for_fn = "deny"
+
+# annoying to deal with
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+
+[dependencies]
+hex_color = { version = "3.0.0", features = ["serde"] }
+html-escape = "0.2.13"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_norway = "0.9.42"

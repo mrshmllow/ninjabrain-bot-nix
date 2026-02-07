@@ -1,0 +1,9 @@
+[files]
+extend-exclude = ["COPYING"]
+
+[default]
+locale = "en-au"
+
+[type.rust.extend-words]
+# serde
+serialize = "serialize"
