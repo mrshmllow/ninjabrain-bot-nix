@@ -14,13 +14,17 @@ let
       lib.mapAttrsToList (k: v: "<entry key=\"${k}\" value=\"${toString v}\"/>") settings
     );
 
-  getTheme = builtins.readFile (
-    pkgs.runCommand "generate-ninb-theme" { } ''
-      cat ${config.lib.stylix.colors.outPath} | ${
-        lib.getExe' self.packages.${pkgs.system}.default "serializer"
-      } > $out
-    ''
-  );
+  getTheme =
+    lib.pipe
+      (pkgs.runCommand "generate-ninb-theme" { } ''
+        cat ${config.lib.stylix.colors.outPath} | ${
+          lib.getExe' self.packages.${pkgs.system}.default "serializer"
+        } > $out
+      '')
+      [
+        (builtins.readFile)
+        (lib.escapeXML)
+      ];
 in
 {
   options.programs.ninjabrain-bot = {

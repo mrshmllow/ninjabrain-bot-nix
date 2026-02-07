@@ -98,7 +98,7 @@ impl Base16 {
         string += &Base16::tag_and_colour('q', self.base0E);
         string += &Base16::tag_and_colour('p', self.base08);
 
-        html_escape::encode_text(&string).to_string()
+        string
     }
 }
 

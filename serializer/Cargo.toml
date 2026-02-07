@@ -13,6 +13,5 @@ missing_panics_doc = "allow"
 
 [dependencies]
 hex_color = { version = "3.0.0", features = ["serde"] }
-html-escape = "0.2.13"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_norway = "0.9.42"
