@@ -2,7 +2,7 @@
 
 Bla bla
 
-## Home Manager Options:
+## Home Manager Options
 
 ### programs\.ninjabrain-bot\.enable
 
@@ -40,7 +40,7 @@ List of custom theme strings\. Ninjabrain bot seperates these by a ` . `
 
 
 *Type:*
-list of attribute set of (submodule)
+list of (submodule)
 
 
 
@@ -52,7 +52,7 @@ list of attribute set of (submodule)
 
 
 
-### programs\.ninjabrain-bot\.additional_custom_themes\.\*\.\<name>\.name
+### programs\.ninjabrain-bot\.additional_custom_themes\.\*\.name
 
 
 
@@ -65,7 +65,7 @@ string matching the pattern ^\[^\.]\*$
 
 
 
-### programs\.ninjabrain-bot\.additional_custom_themes\.\*\.\<name>\.value
+### programs\.ninjabrain-bot\.additional_custom_themes\.\*\.value
 
 
 
@@ -87,32 +87,11 @@ This option has no description\.
 
 
 *Type:*
-attribute set of (submodule)
+submodule
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.enable_http_server
-
-
-
-This option has no description\.
-
-
-
-*Type:*
-boolean
-
-
-
-*Default:*
-
-```nix
-false
-```
-
-
-
-### programs\.ninjabrain-bot\.settings\.\<name>\.all_advancements
+### programs\.ninjabrain-bot\.settings\.enable_http_server
 
 
 
@@ -133,7 +112,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.alt_clipboard_reader
+### programs\.ninjabrain-bot\.settings\.all_advancements
 
 
 
@@ -154,7 +133,28 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.always_on_top
+### programs\.ninjabrain-bot\.settings\.alt_clipboard_reader
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.always_on_top
 
 
 
@@ -175,7 +175,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.auto_reset
+### programs\.ninjabrain-bot\.settings\.auto_reset
 
 
 
@@ -196,7 +196,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.auto_reset_on_instance_change
+### programs\.ninjabrain-bot\.settings\.auto_reset_on_instance_change
 
 
 
@@ -217,7 +217,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.boat_error
+### programs\.ninjabrain-bot\.settings\.boat_error
 
 
 
@@ -238,7 +238,7 @@ integer or floating point number between 0 and 0\.7 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.check_for_updates
+### programs\.ninjabrain-bot\.settings\.check_for_updates
 
 
 
@@ -259,7 +259,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.color_negative_coords
+### programs\.ninjabrain-bot\.settings\.color_negative_coords
 
 
 
@@ -280,7 +280,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.combined_offset_information_enabled
+### programs\.ninjabrain-bot\.settings\.combined_offset_information_enabled
 
 
 
@@ -301,7 +301,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.crosshair_correction
+### programs\.ninjabrain-bot\.settings\.crosshair_correction
 
 
 
@@ -322,7 +322,7 @@ integer or floating point number between -1 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.custom_adjustment
+### programs\.ninjabrain-bot\.settings\.custom_adjustment
 
 
 
@@ -343,7 +343,7 @@ integer or floating point number between 0 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.custom_themes
+### programs\.ninjabrain-bot\.settings\.custom_themes
 
 
 
@@ -364,7 +364,7 @@ string
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.custom_themes_names
+### programs\.ninjabrain-bot\.settings\.custom_themes_names
 
 
 
@@ -385,7 +385,7 @@ string
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.direction_help_enabled
+### programs\.ninjabrain-bot\.settings\.direction_help_enabled
 
 
 
@@ -406,7 +406,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.mismeasure_warning_enabled
+### programs\.ninjabrain-bot\.settings\.mismeasure_warning_enabled
 
 
 
@@ -427,7 +427,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.one_dot_twenty_plus_aa
+### programs\.ninjabrain-bot\.settings\.one_dot_twenty_plus_aa
 
 
 
@@ -448,7 +448,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.overlay_auto_hide
+### programs\.ninjabrain-bot\.settings\.overlay_auto_hide
 
 
 
@@ -469,7 +469,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.overlay_hide_delay
+### programs\.ninjabrain-bot\.settings\.overlay_hide_delay
 
 
 
@@ -490,7 +490,7 @@ integer or floating point number between 1 and 3600 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.overlay_lock_hide
+### programs\.ninjabrain-bot\.settings\.overlay_lock_hide
 
 
 
@@ -511,7 +511,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.portal_linking_warning_enabled
+### programs\.ninjabrain-bot\.settings\.portal_linking_warning_enabled
 
 
 
@@ -532,7 +532,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.resolution_height
+### programs\.ninjabrain-bot\.settings\.resolution_height
 
 
 
@@ -553,7 +553,7 @@ integer or floating point number between 1 and 16384 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.save_state
+### programs\.ninjabrain-bot\.settings\.save_state
 
 
 
@@ -574,7 +574,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sensitivity
+### programs\.ninjabrain-bot\.settings\.sensitivity
 
 
 
@@ -595,7 +595,7 @@ integer or floating point number between 0 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sensitivity_manual
+### programs\.ninjabrain-bot\.settings\.sensitivity_manual
 
 
 
@@ -616,7 +616,7 @@ integer or floating point number between 0 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.show_angle_errors
+### programs\.ninjabrain-bot\.settings\.show_angle_errors
 
 
 
@@ -637,7 +637,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.show_angle_updates
+### programs\.ninjabrain-bot\.settings\.show_angle_updates
 
 
 
@@ -658,7 +658,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.show_nether_coords
+### programs\.ninjabrain-bot\.settings\.show_nether_coords
 
 
 
@@ -679,7 +679,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sigma
+### programs\.ninjabrain-bot\.settings\.sigma
 
 
 
@@ -700,7 +700,7 @@ integer or floating point number between 0\.001 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sigma_alt
+### programs\.ninjabrain-bot\.settings\.sigma_alt
 
 
 
@@ -721,7 +721,7 @@ integer or floating point number between 0\.001 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sigma_boat
+### programs\.ninjabrain-bot\.settings\.sigma_boat
 
 
 
@@ -742,7 +742,7 @@ integer or floating point number between 0\.0001 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.sigma_manual
+### programs\.ninjabrain-bot\.settings\.sigma_manual
 
 
 
@@ -763,7 +763,7 @@ integer or floating point number between 0\.001 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.theme
+### programs\.ninjabrain-bot\.settings\.theme
 
 
 
@@ -785,7 +785,7 @@ signed integer
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.translucent
+### programs\.ninjabrain-bot\.settings\.translucent
 
 
 
@@ -806,7 +806,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.use_adv_statistics
+### programs\.ninjabrain-bot\.settings\.use_adv_statistics
 
 
 
@@ -827,7 +827,7 @@ true
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.use_alt_std
+### programs\.ninjabrain-bot\.settings\.use_alt_std
 
 
 
@@ -848,7 +848,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.use_obs_overlay
+### programs\.ninjabrain-bot\.settings\.use_obs_overlay
 
 
 
@@ -869,7 +869,7 @@ false
 
 
 
-### programs\.ninjabrain-bot\.settings\.\<name>\.use_precise_angle
+### programs\.ninjabrain-bot\.settings\.use_precise_angle
 
 
 

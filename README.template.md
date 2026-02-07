@@ -2,6 +2,6 @@
 
 Bla bla
 
-## Home Manager Options:
+## Home Manager Options
 
 @docs@
