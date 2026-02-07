@@ -41,7 +41,6 @@
           pkgs,
           inputs',
           config,
-          lib,
           craneLib,
           commonArgs,
           ...
@@ -59,43 +58,47 @@
             inherit self;
           };
 
-          packages.default = craneLib.buildPackage (
-            commonArgs
-            // {
-              src = craneLib.cleanCargoSource ./serializer;
-              strictDeps = true;
-              cargoArtifacts = craneLib.buildDepsOnly commonArgs;
-            }
-          );
+          packages = {
+            default = craneLib.buildPackage (
+              commonArgs
+              // {
+                src = craneLib.cleanCargoSource ./serializer;
+                strictDeps = true;
+                cargoArtifacts = craneLib.buildDepsOnly commonArgs;
+              }
+            );
 
-          packages."options-md" =
-            let
-              modules = inputs.home-manager.lib.homeManagerConfiguration {
-                inherit pkgs;
-                modules = [
-                  (import ./module.nix self)
-                  {
-                    home.username = "user";
-                    home.homeDirectory = "/home/user";
-                    home.stateVersion = "25.11";
-                  }
-                ];
-              };
-
-              options = pkgs.nixosOptionsDoc {
-                options = {
-                  programs.ninjabrain-bot = modules.options.programs.ninjabrain-bot;
+            "options-md" =
+              let
+                modules = inputs.home-manager.lib.homeManagerConfiguration {
+                  inherit pkgs;
+                  modules = [
+                    (import ./module.nix self)
+                    {
+                      home = {
+                        username = "user";
+                        homeDirectory = "/home/user";
+                        stateVersion = "25.11";
+                      };
+                    }
+                  ];
                 };
 
-                warningsAreErrors = false;
-              };
-            in
-            pkgs.runCommand "options-doc.md" { } ''
-              sed '/\*Declared by:\*/,+1d' ${options.optionsCommonMark} | sed 's/^#/##/' > $out
-            '';
+                options = pkgs.nixosOptionsDoc {
+                  options = {
+                    programs.ninjabrain-bot = modules.options.programs.ninjabrain-bot;
+                  };
 
-          packages."readme-md" = pkgs.replaceVars ./README.template.md {
-            docs = builtins.readFile self'.packages."options-md";
+                  warningsAreErrors = false;
+                };
+              in
+              pkgs.runCommand "options-doc.md" { } ''
+                sed '/\*Declared by:\*/,+1d' ${options.optionsCommonMark} | sed 's/^#/##/' > $out
+              '';
+
+            "readme-md" = pkgs.replaceVars ./README.template.md {
+              docs = builtins.readFile self'.packages."options-md";
+            };
           };
 
           treefmt = {

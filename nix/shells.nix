@@ -4,7 +4,6 @@
       config,
       lib,
       craneLib,
-      pkgs,
       ...
     }:
     let

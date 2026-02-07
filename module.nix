@@ -22,8 +22,8 @@ let
         } > $out
       '')
       [
-        (builtins.readFile)
-        (lib.escapeXML)
+        builtins.readFile
+        lib.escapeXML
       ];
 in
 {
@@ -45,7 +45,7 @@ in
         }
       );
       default = [ ];
-      description = "List of custom theme strings. Ninjabrain bot seperates these by a `.`";
+      description = "List of custom theme strings. Ninjabrain bot separates these by a `.`";
     };
 
     settings = lib.mkOption {
@@ -62,17 +62,15 @@ in
 
           custom_themes = lib.mkOption {
             type = lib.types.str;
-            default = (
-              lib.join "." (
-                (map (x: x.value) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix stylix_theme)
-              )
+            default = lib.join "." (
+              (map (x: x.value) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix stylix_theme)
             );
           };
 
           custom_themes_names = lib.mkOption {
             type = lib.types.str;
-            default = (
-              lib.join "." ((map (x: x.name) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix "Stylix"))
+            default = lib.join "." (
+              (map (x: x.name) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix "Stylix")
             );
           };
 

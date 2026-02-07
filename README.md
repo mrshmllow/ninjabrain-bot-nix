@@ -35,7 +35,7 @@ true
 
 ### programs\.ninjabrain-bot\.additional_custom_themes
 
-List of custom theme strings\. Ninjabrain bot seperates these by a ` . `
+List of custom theme strings\. Ninjabrain bot separates these by a ` . `
 
 
 
