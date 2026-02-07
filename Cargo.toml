@@ -3,6 +3,10 @@ name = "serializer"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "serializer"
+path = "serializer/src/main.rs"
+
 [lints.clippy]
 pedantic = { level = "deny", priority = -1 }
 missing_const_for_fn = "deny"
