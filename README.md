@@ -55,7 +55,7 @@ null or package
 *Default:*
 
 ```nix
-pkgs.ninjabrain-bot
+mcsrPkgs.ninjabrain-bot
 ```
 
 

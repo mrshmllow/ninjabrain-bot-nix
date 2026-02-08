@@ -34,6 +34,7 @@ in
         {
           extraDescription = "Default's to uku's ninjabrain-bot package. Setting to null will skip installing the package.";
           nullable = true;
+          pkgsText = "mcsrPkgs";
         };
 
     stylix = lib.mkEnableOption "style ninjabrain bot";
