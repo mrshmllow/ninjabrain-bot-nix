@@ -48,7 +48,7 @@ let
     lib.pipe
       (pkgs.runCommand "generate-ninb-theme" { } ''
         cat ${config.lib.stylix.colors.outPath} | ${
-          lib.getExe' self.packages.${pkgs.stdenv.hostPlatform.system}.default "serializer"
+          lib.getExe' self.packages.${pkgs.stdenv.hostPlatform.system}.serializer "serializer"
         } > $out
       '')
       [

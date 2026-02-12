@@ -63,7 +63,7 @@
           };
 
           packages = {
-            default = craneLib.buildPackage (
+            serializer = craneLib.buildPackage (
               commonArgs
               // {
                 cargoArtifacts = craneLib.buildDepsOnly commonArgs;
