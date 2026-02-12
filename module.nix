@@ -53,26 +53,37 @@ in
           options = {
             name = lib.mkOption {
               type = lib.types.strMatching "^[^.]*$";
+              description = "Name of the theme. Must not contain a `.`";
             };
             value = lib.mkOption {
               type = lib.types.strMatching "^[^.]*$";
+              description = ''
+                Theme colours encoded string. Find by creating the theme in the GUI then copying it from the preferences file.
+                Must not contain a `.`.
+              '';
             };
           };
         }
       );
       default = [ ];
-      description = "List of custom theme strings. Ninjabrain bot separates these by a `.`";
+      description = ''
+        List of custom themes.
+        Obtaining a theme string is quite hard and it's recommended you create one in the GUI first then copying it manually from the preferences file.
+        Ninjabrain-bot separates themes by a `.`.
+      '';
     };
 
     settings = lib.mkOption {
       default = { };
+      description = "Settings for ninjabrain-bot";
       type = lib.types.submodule {
         options = {
           theme = lib.mkOption {
             type = lib.types.int;
             description = ''
-              Theme index. 
+              Theme index.
               Positive values refer to the builtin themes that come with ninjabrain bot.
+              Negative values refer to custom themes, backwards. `-1` would refer to the first custom theme, `-2` the second, and so on.
             '';
             default = if cfg.stylix then -1 else 1;
           };
@@ -202,6 +213,7 @@ in
           auto_reset = lib.mkOption {
             type = lib.types.bool;
             default = false;
+            description = "Automatically reset the calculator after some period of time.";
           };
 
           auto_reset_on_instance_change = lib.mkOption {
@@ -217,6 +229,7 @@ in
           alt_clipboard_reader = lib.mkOption {
             type = lib.types.bool;
             default = false;
+            description = "Whether or not to use the 'alternative clipboard reader'";
           };
 
           use_alt_std = lib.mkOption {
@@ -247,6 +260,7 @@ in
           enable_http_server = lib.mkOption {
             type = lib.types.bool;
             default = false;
+            description = "Enable the HTTP API server";
           };
 
           overlay_auto_hide = lib.mkOption {
@@ -290,6 +304,7 @@ in
           };
 
           language_v2 = lib.mkOption {
+            description = "Language code. Leave to default for the system language.";
             type = lib.types.str;
             default = "";
           };

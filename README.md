@@ -62,7 +62,9 @@ mcsrPkgs.ninjabrain-bot
 
 ### programs\.ninjabrain-bot\.additional_custom_themes
 
-List of custom theme strings\. Ninjabrain bot separates these by a ` . `
+List of custom themes\.
+Obtaining a theme string is quite hard and it’s recommended you create one in the GUI first then copying it manually from the preferences file\.
+Ninjabrain-bot separates themes by a ` . `\.
 
 
 
@@ -83,7 +85,7 @@ list of (submodule)
 
 
 
-This option has no description\.
+Name of the theme\. Must not contain a ` . `
 
 
 
@@ -96,7 +98,8 @@ string matching the pattern ^\[^\.]\*$
 
 
 
-This option has no description\.
+Theme colours encoded string\. Find by creating the theme in the GUI then copying it from the preferences file\.
+Must not contain a ` . `\.
 
 
 
@@ -109,7 +112,7 @@ string matching the pattern ^\[^\.]\*$
 
 
 
-This option has no description\.
+Settings for ninjabrain-bot
 
 
 
@@ -130,7 +133,7 @@ submodule
 
 
 
-This option has no description\.
+Enable the HTTP API server
 
 
 
@@ -193,7 +196,7 @@ false
 
 
 
-This option has no description\.
+Whether or not to use the ‘alternative clipboard reader’
 
 
 
@@ -277,7 +280,7 @@ one of “subpixel”, “tall”, “custom”
 
 
 
-This option has no description\.
+Automatically reset the calculator after some period of time\.
 
 
 
@@ -487,7 +490,7 @@ false
 
 
 
-This option has no description\.
+Language code\. Leave to default for the system language\.
 
 
 
@@ -930,6 +933,7 @@ one of “fourfour”, “eighteight”, “chunk”
 
 Theme index\.
 Positive values refer to the builtin themes that come with ninjabrain bot\.
+Negative values refer to custom themes, backwards\. ` -1 ` would refer to the first custom theme, ` -2 ` the second, and so on\.
 
 
 
