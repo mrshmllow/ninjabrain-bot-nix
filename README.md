@@ -486,6 +486,611 @@ false
 
 
 
+### programs\.ninjabrain-bot\.settings\.hotkey_alt_std
+
+
+
+Hotkey for alt_std
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_alt_std\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_alt_std\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_boat
+
+
+
+Hotkey for boat
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_boat\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_boat\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_decrement
+
+
+
+Hotkey for decrement
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_decrement\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_decrement\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_increment
+
+
+
+Hotkey for increment
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_increment\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_increment\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_lock
+
+
+
+Hotkey for lock
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_lock\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_lock\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_minimize
+
+
+
+Hotkey for minimize
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_minimize\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_minimize\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_mod_360
+
+
+
+Hotkey for mod_360
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_mod_360\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_mod_360\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_redo
+
+
+
+Hotkey for redo
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_redo\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_redo\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_reset
+
+
+
+Hotkey for reset
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_reset\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_reset\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_toggle_aa_mode
+
+
+
+Hotkey for toggle_aa_mode
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_toggle_aa_mode\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_toggle_aa_mode\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_undo
+
+
+
+Hotkey for undo
+
+
+
+*Type:*
+null or (submodule)
+
+
+
+*Default:*
+
+```nix
+null
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_undo\.key
+
+
+
+Integer keycode\.
+
+
+
+*Type:*
+signed integer
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_undo\.modifiers
+
+
+
+List of modifier keys\.
+
+
+
+*Type:*
+list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L”, “META_R”, “SHIFT_L”, “SHIFT_R”)
+
+
+
+*Default:*
+
+```nix
+[ ]
+```
+
+
+
 ### programs\.ninjabrain-bot\.settings\.language_v2
 
 

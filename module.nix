@@ -6,7 +6,37 @@
   ...
 }:
 let
+  # values from https://javadoc.io/doc/com.1stleg/jnativehook/2.0.2/constant-values.html
+  MODIFIER_MASKS = {
+    ALT_L = 8;
+    ALT_R = 128;
+    CTRL_L = 2;
+    CTRL_R = 32;
+    META_L = 4;
+    META_R = 64;
+    SHIFT_L = 1;
+    SHIFT_R = 16;
+  };
+
   cfg = config.programs.ninjabrain-bot;
+
+  # filters null & expands hotkeys into two attributes
+  hotkeyExpandedSettings =
+    let
+      expandHotkey = name: value: {
+        "${name}_code" = value.key;
+        "${name}_modifier" = value.modifiers;
+      };
+    in
+    lib.concatMapAttrs (
+      name: value:
+      if builtins.isNull value then
+        { }
+      else if (builtins.isAttrs value) && (value ? "key") then
+        expandHotkey name value
+      else
+        lib.nameValuePair name value
+    ) cfg.settings;
 
   mkNinbLines =
     settings:
@@ -14,7 +44,7 @@ let
       lib.mapAttrsToList (k: v: "<entry key=\"${k}\" value=\"${toString v}\"/>") settings
     );
 
-  stylix_theme =
+  mkStylixTheme =
     lib.pipe
       (pkgs.runCommand "generate-ninb-theme" { } ''
         cat ${config.lib.stylix.colors.outPath} | ${
@@ -32,6 +62,41 @@ let
       inherit default;
       type = lib.types.enum enum;
       apply = value: lib.lists.findFirstIndex (x: x == value) 0 enum;
+    };
+
+  mkHotkeyOption =
+    name:
+    lib.mkOption {
+      description = "Hotkey for ${name}";
+      default = null;
+      type = lib.types.nullOr (
+        lib.types.submodule {
+          options = {
+            modifiers = lib.mkOption {
+              type = lib.types.listOf (
+                lib.types.enum [
+                  "ALT_L"
+                  "ALT_R"
+                  "CTRL_L"
+                  "CTRL_R"
+                  "META_L"
+                  "META_R"
+                  "SHIFT_L"
+                  "SHIFT_R"
+                ]
+              );
+              default = [ ];
+              description = "List of modifier keys.";
+              # bitwise or of all the values summed together
+              apply = list: builtins.foldl' (acc: element: builtins.bitOr acc MODIFIER_MASKS.${element}) 0 list;
+            };
+            key = lib.mkOption {
+              type = lib.types.int;
+              description = "Integer keycode.";
+            };
+          };
+        }
+      );
     };
 in
 {
@@ -93,7 +158,7 @@ in
             internal = true;
             visible = false;
             default = lib.join "." (
-              (map (x: x.value) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix stylix_theme)
+              (map (x: x.value) cfg.additional_custom_themes) ++ (lib.optional cfg.stylix mkStylixTheme)
             );
           };
 
@@ -317,6 +382,18 @@ in
           default_boat_type = mkEnumOption [ "gray" "blue" "green" ] "gray";
           angle_adjustment_type = mkEnumOption [ "subpixel" "tall" "custom" ] "subpixel";
           angle_adjustment_display_type = mkEnumOption [ "angle_change" "increments" ] "angle_change";
+
+          hotkey_increment = mkHotkeyOption "increment";
+          hotkey_decrement = mkHotkeyOption "decrement";
+          hotkey_reset = mkHotkeyOption "reset";
+          hotkey_undo = mkHotkeyOption "undo";
+          hotkey_redo = mkHotkeyOption "redo";
+          hotkey_minimize = mkHotkeyOption "minimize";
+          hotkey_alt_std = mkHotkeyOption "alt_std";
+          hotkey_lock = mkHotkeyOption "lock";
+          hotkey_boat = mkHotkeyOption "boat";
+          hotkey_mod_360 = mkHotkeyOption "mod_360";
+          hotkey_toggle_aa_mode = mkHotkeyOption "toggle_aa_mode";
         };
       };
     };
@@ -329,7 +406,7 @@ in
         <!DOCTYPE map SYSTEM "http://java.sun.com/dtd/preferences.dtd">
         <map MAP_XML_VERSION="1.0">
       ''
-      + (mkNinbLines cfg.settings)
+      + (mkNinbLines hotkeyExpandedSettings)
       + ''
         </map>
       '';

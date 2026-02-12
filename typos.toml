@@ -7,3 +7,11 @@ locale = "en-au"
 [type.rust.extend-words]
 # serde
 serialize = "serialize"
+
+[type.nix.extend-words]
+# ninjabrain bot option
+minimize = "minimize"
+
+[type.md.extend-words]
+# ninjabrain bot option
+minimize = "minimize"
