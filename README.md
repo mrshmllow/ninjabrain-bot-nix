@@ -118,6 +118,14 @@ submodule
 
 
 
+*Default:*
+
+```nix
+{ }
+```
+
+
+
 ### programs\.ninjabrain-bot\.settings\.enable_http_server
 
 
@@ -135,6 +143,27 @@ boolean
 
 ```nix
 false
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.aa_toggle_type
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “automatic”, “hotkey”
+
+
+
+*Default:*
+
+```nix
+"automatic"
 ```
 
 
@@ -198,6 +227,48 @@ boolean
 
 ```nix
 true
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.angle_adjustment_display_type
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “angle_change”, “increments”
+
+
+
+*Default:*
+
+```nix
+"angle_change"
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.angle_adjustment_type
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “subpixel”, “tall”, “custom”
+
+
+
+*Default:*
+
+```nix
+"subpixel"
 ```
 
 
@@ -370,7 +441,7 @@ integer or floating point number between 0 and 1 (both inclusive)
 
 
 
-### programs\.ninjabrain-bot\.settings\.custom_themes
+### programs\.ninjabrain-bot\.settings\.default_boat_type
 
 
 
@@ -379,35 +450,14 @@ This option has no description\.
 
 
 *Type:*
-string
+one of “gray”, “blue”, “green”
 
 
 
 *Default:*
 
 ```nix
-""
-```
-
-
-
-### programs\.ninjabrain-bot\.settings\.custom_themes_names
-
-
-
-This option has no description\.
-
-
-
-*Type:*
-string
-
-
-
-*Default:*
-
-```nix
-""
+"gray"
 ```
 
 
@@ -429,6 +479,48 @@ boolean
 
 ```nix
 false
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.language_v2
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+string
+
+
+
+*Default:*
+
+```nix
+""
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.mc_version
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “pre_119”, “post_119”
+
+
+
+*Default:*
+
+```nix
+"pre_119"
 ```
 
 
@@ -512,7 +604,7 @@ integer or floating point number between 1 and 3600 (both inclusive)
 *Default:*
 
 ```nix
-30
+30.0
 ```
 
 
@@ -790,6 +882,48 @@ integer or floating point number between 0\.001 and 1 (both inclusive)
 
 
 
+### programs\.ninjabrain-bot\.settings\.size
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “small”, “medium”, “large”
+
+
+
+*Default:*
+
+```nix
+"small"
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.stronghold_display_type
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “fourfour”, “eighteight”, “chunk”
+
+
+
+*Default:*
+
+```nix
+"fourfour"
+```
+
+
+
 ### programs\.ninjabrain-bot\.settings\.theme
 
 
@@ -913,6 +1047,69 @@ boolean
 
 ```nix
 false
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.view
+
+
+
+This option has no description\.
+
+
+
+*Type:*
+one of “basic”, “detailed”
+
+
+
+*Default:*
+
+```nix
+"basic"
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.window_x
+
+
+
+Window X position
+
+
+
+*Type:*
+signed integer
+
+
+
+*Default:*
+
+```nix
+100
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.window_y
+
+
+
+Window Y position
+
+
+
+*Type:*
+signed integer
+
+
+
+*Default:*
+
+```nix
+100
 ```
 
 
