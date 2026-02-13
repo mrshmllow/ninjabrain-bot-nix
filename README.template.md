@@ -17,23 +17,36 @@ todo! Expand these examples
   programs.ninjabrain-bot = {
     enable = true;
     stylix = true;
-
     settings = {
-      hotkey_increment = {
-        key = 57421; # VC_RIGHT
-      };
-      hotkey_decrement = {
-        key = 57419; # VC_LEFT
-      };
+      hotkey_decrement.key = 57419; # "right"
+      hotkey_increment.key = 57421; # "left"
+
+      hotkey_lock.key = 23; # "i"
       hotkey_reset = {
-        key = 19; # VC_R
+        key = 19; # "r"
         modifiers = [ "ALT_L" ];
       };
 
-      sensitivity_manual = 0.4341732;
-      sigma = 0.1;
-      resolution_height = 16384;
-      # ...
+      view = "detailed";
+      all_advancements = false;
+      mc_version = "pre_119";
+      sensitivity = 0.02291165;
+
+      default_boat_type = "green";
+      alt_clipboard_reader = false;
+      angle_adjustment_display_type = "increments";
+      angle_adjustment_type = "tall";
+      auto_reset = false;
+      color_negative_coords = false;
+      direction_help_enabled = true;
+      show_angle_errors = true;
+      show_angle_updates = true;
+      sigma_boat = 0.0007;
+      stronghold_display_type = "fourfour";
+      use_adv_statistics = true;
+      use_precise_angle = true;
+
+      enable_http_server = true;
     };
   };
 }
