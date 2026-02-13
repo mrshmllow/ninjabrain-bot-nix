@@ -67,14 +67,16 @@ let
 
   mkEnumOption =
     enum: default:
-    let 
-        big_enum = (builtins.length enum) > 2;
+    let
+      big_enum = (builtins.length enum) > 2;
     in
     lib.mkOption {
       inherit default;
       description = ''
         When translated to XML, this option is turned into an integer,
-        with `0` being "${builtins.head enum}",${lib.optionalString (!big_enum) " and"} `1` being "${builtins.elemAt enum 1}"${lib.optionalString big_enum ", and so on"}.
+        with `0` being "${builtins.head enum}",${
+          lib.optionalString (!big_enum) " and"
+        } `1` being "${builtins.elemAt enum 1}"${lib.optionalString big_enum ", and so on"}.
       '';
       type = lib.types.enum enum;
       apply = value: lib.lists.findFirstIndex (x: x == value) 0 enum;

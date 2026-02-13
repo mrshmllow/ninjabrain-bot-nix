@@ -6,13 +6,23 @@ By default the package comes from [uku's mcsr-nixos flake](https://git.uku3lig.n
 
 ## Examples
 
-todo! Expand these examples
+This can be used as a flake as:
+
+```nix
+inputs = {
+    ninjabrain-bot = {
+      url = "https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk";
+    };
+};
+```
+
+Here is an example configuration:
 
 ```nix
 # home.nix
 { inputs, ... }:
 {
-  imports = [ inputs.ninjabrain-bot-nix.homeModules.default ];
+  imports = [ inputs.ninjabrain-bot.homeModules.default ];
 
   programs.ninjabrain-bot = {
     enable = true;
