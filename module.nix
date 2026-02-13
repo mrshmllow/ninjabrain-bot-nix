@@ -44,7 +44,7 @@ let
       else if (builtins.isAttrs value) && (value ? "key") then
         expandHotkey name value
       else
-        lib.nameValuePair name value
+        { ${name} = value; }
     ) cfg.settings;
 
   mkNinbLines =
