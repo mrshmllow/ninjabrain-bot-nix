@@ -198,7 +198,8 @@ false
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “automatic”, and ` 1 ` being “hotkey”\.
 
 
 
@@ -282,7 +283,8 @@ true
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “angle_change”, and ` 1 ` being “increments”\.
 
 
 
@@ -303,7 +305,8 @@ one of “angle_change”, “increments”
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “subpixel”, ` 1 ` being “tall”, and so on\.
 
 
 
@@ -492,7 +495,8 @@ integer or floating point number between 0 and 1 (both inclusive)
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “gray”, ` 1 ` being “blue”, and so on\.
 
 
 
@@ -1677,7 +1681,8 @@ string
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “pre_119”, and ` 1 ` being “post_119”\.
 
 
 
@@ -2055,7 +2060,8 @@ integer or floating point number between 0\.001 and 1 (both inclusive)
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “small”, ` 1 ` being “medium”, and so on\.
 
 
 
@@ -2076,7 +2082,8 @@ one of “small”, “medium”, “large”
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “fourfour”, ` 1 ` being “eighteight”, and so on\.
 
 
 
@@ -2225,7 +2232,8 @@ false
 
 
 
-This option has no description\.
+When translated to XML, this option is turned into an integer,
+with ` 0 ` being “basic”, and ` 1 ` being “detailed”\.
 
 
 
