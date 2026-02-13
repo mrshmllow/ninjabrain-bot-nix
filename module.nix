@@ -17,6 +17,13 @@ let
     SHIFT_L = 1;
     SHIFT_R = 16;
   };
+  LOCATION_VALUES = {
+    UNKNOWN = 0;
+    STANDARD = 1;
+    RIGHT = 3;
+    NUMPAD = 4;
+    LEFT = 2;
+  };
 
   cfg = config.programs.ninjabrain-bot;
 
@@ -24,7 +31,9 @@ let
   hotkeyExpandedSettings =
     let
       expandHotkey = name: value: {
-        "${name}_code" = value.key;
+        # reference: https://github.com/Ninjabrain1/Ninjabrain-Bot/blob/34117a46d700610aab0237f73bd9418a09940e5f/src/main/java/ninjabrainbot/io/preferences/HotkeyPreference.java#L64
+        # equivalent to (key | location << 16)
+        "${name}_code" = builtins.bitOr value.key (LOCATION_VALUES.${value.location} * 65536);
         "${name}_modifier" = value.modifiers;
       };
     in
@@ -86,13 +95,38 @@ let
                 ]
               );
               default = [ ];
+              example = [ "CTRL_L" ];
               description = "List of modifier keys.";
               # bitwise or of all the values summed together
               apply = list: builtins.foldl' (acc: element: builtins.bitOr acc MODIFIER_MASKS.${element}) 0 list;
             };
+            location = lib.mkOption {
+              type = lib.types.enum [
+                "STANDARD"
+                "RIGHT"
+                "NUMPAD"
+                "LEFT"
+                "UNKNOWN"
+              ];
+              default = "STANDARD";
+              description = ''
+                The location of the key.
+
+                If you want to refer to '0' on your numpad, you would set this value to NUMPAD. Most of the time, STANDARD is what you want.
+              '';
+            };
             key = lib.mkOption {
               type = lib.types.int;
-              description = "Integer keycode.";
+              example = 19;
+              description = ''
+                Integer keycode.
+
+                These can be obtained by finding the key from the list of constants at https://javadoc.io/doc/com.1stleg/jnativehook/2.0.2/constant-values.html.
+
+                For example, the key "A" corresponds to the field "VC_A", which has the value 30, so you should set this value to 30.
+
+                The key "R" would correspond to "VC_R", F6 to "VC_F6", etc.
+              '';
             };
           };
         }

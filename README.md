@@ -513,10 +513,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_alt_std\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -537,6 +574,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -568,10 +615,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_boat\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -592,6 +676,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -623,10 +717,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_decrement\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -647,6 +778,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -678,10 +819,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_increment\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -702,6 +880,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -733,10 +921,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_lock\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -757,6 +982,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -788,10 +1023,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_minimize\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -812,6 +1084,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -843,10 +1125,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_mod_360\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -867,6 +1186,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -898,10 +1227,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_redo\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -922,6 +1288,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -953,10 +1329,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_reset\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -977,6 +1390,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -1008,10 +1431,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_toggle_aa_mode\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -1032,6 +1492,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
@@ -1063,10 +1533,47 @@ null
 
 Integer keycode\.
 
+These can be obtained by finding the key from the list of constants at https://javadoc\.io/doc/com\.1stleg/jnativehook/2\.0\.2/constant-values\.html\.
+
+For example, the key “A” corresponds to the field “VC_A”, which has the value 30, so you should set this value to 30\.
+
+The key “R” would correspond to “VC_R”, F6 to “VC_F6”, etc\.
+
 
 
 *Type:*
 signed integer
+
+
+
+*Example:*
+
+```nix
+19
+```
+
+
+
+### programs\.ninjabrain-bot\.settings\.hotkey_undo\.location
+
+
+
+The location of the key\.
+
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+
+
+
+*Type:*
+one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
+
+
+
+*Default:*
+
+```nix
+"STANDARD"
+```
 
 
 
@@ -1087,6 +1594,16 @@ list of (one of “ALT_L”, “ALT_R”, “CTRL_L”, “CTRL_R”, “META_L�
 
 ```nix
 [ ]
+```
+
+
+
+*Example:*
+
+```nix
+[
+  "CTRL_L"
+]
 ```
 
 
