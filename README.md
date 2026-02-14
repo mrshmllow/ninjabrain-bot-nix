@@ -4,6 +4,8 @@ Home Manager Module for [Ninjabrain-Bot](https://github.com/Ninjabrain1/Ninjabra
 
 By default the package comes from [uku's mcsr-nixos flake](https://git.uku3lig.net/uku/mcsr-nixos/src/branch/main).
 
+The math to do with the "Location" of hotkeys was kind of confusing to implement and may be incorrect. If ninjabrain bot has weird hexadecimal values in place of the keys you expect please create an issue!!
+
 ## Examples
 
 This can be used as a flake as:
