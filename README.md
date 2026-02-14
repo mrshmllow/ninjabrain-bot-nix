@@ -164,6 +164,27 @@ string matching the pattern ^\[^\.]\*$
 
 
 
+### programs\.ninjabrain-bot\.force
+
+
+
+Ninjabrain-bot will wipe the symlink to the nix store in it’s config file, so this option exists to always force and overwrite the file back into place\.
+
+
+
+*Type:*
+boolean
+
+
+
+*Default:*
+
+```nix
+false
+```
+
+
+
 ### programs\.ninjabrain-bot\.settings
 
 
@@ -2308,7 +2329,7 @@ signed integer
 
 
 
-Whether to enable style ninjabrain bot\.
+Whether to enable style ninjabrain-bot with stylix\.
 
 
 

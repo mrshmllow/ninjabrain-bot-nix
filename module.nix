@@ -153,7 +153,13 @@ in
           pkgsText = "mcsrPkgs";
         };
 
-    stylix = lib.mkEnableOption "style ninjabrain bot";
+    stylix = lib.mkEnableOption "style ninjabrain-bot with stylix";
+
+    force = lib.mkOption {
+      type = lib.types.bool;
+      description = "Ninjabrain-bot will wipe the symlink to the nix store in it's config file, so this option exists to always force and overwrite the file back into place.";
+      default = false;
+    };
 
     additional_custom_themes = lib.mkOption {
       type = lib.types.listOf (
@@ -444,15 +450,19 @@ in
 
   config = lib.mkMerge [
     (lib.mkIf cfg.enable {
-      home.file.".java/.userPrefs/ninjabrainbot/prefs.xml".text = ''
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-        <!DOCTYPE map SYSTEM "http://java.sun.com/dtd/preferences.dtd">
-        <map MAP_XML_VERSION="1.0">
-      ''
-      + (mkNinbLines hotkeyExpandedSettings)
-      + ''
-        </map>
-      '';
+      home.file.".java/.userPrefs/ninjabrainbot/prefs.xml" = {
+        inherit (cfg) force;
+
+        text = ''
+          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+          <!DOCTYPE map SYSTEM "http://java.sun.com/dtd/preferences.dtd">
+          <map MAP_XML_VERSION="1.0">
+        ''
+        + (mkNinbLines hotkeyExpandedSettings)
+        + ''
+          </map>
+        '';
+      };
     })
 
     (lib.mkIf (!(builtins.isNull cfg.package)) {
