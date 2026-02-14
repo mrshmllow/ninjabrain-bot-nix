@@ -598,7 +598,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -610,7 +610,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -700,7 +700,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -712,7 +712,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -802,7 +802,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -814,7 +814,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -904,7 +904,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -916,7 +916,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1006,7 +1006,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1018,7 +1018,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1108,7 +1108,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1120,7 +1120,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1210,7 +1210,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1222,7 +1222,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1312,7 +1312,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1324,7 +1324,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1414,7 +1414,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1426,7 +1426,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1516,7 +1516,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1528,7 +1528,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
@@ -1618,7 +1618,7 @@ signed integer
 
 The location of the key\.
 
-If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, STANDARD is what you want\.
+If you want to refer to ‘0’ on your numpad, you would set this value to NUMPAD\. Most of the time, the default is what you want\.
 
 
 
@@ -1630,7 +1630,7 @@ one of “STANDARD”, “RIGHT”, “NUMPAD”, “LEFT”, “UNKNOWN”
 *Default:*
 
 ```nix
-"STANDARD"
+"UNKNOWN"
 ```
 
 
