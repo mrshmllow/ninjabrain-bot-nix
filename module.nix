@@ -49,8 +49,13 @@ let
 
   mkNinbLines =
     settings:
+    let
+      valueString =
+        value:
+        if builtins.isBool value then (if value then "true" else "false") else builtins.toString value;
+    in
     lib.concatLines (
-      lib.mapAttrsToList (k: v: "<entry key=\"${k}\" value=\"${toString v}\"/>") settings
+      lib.mapAttrsToList (k: v: "<entry key=\"${k}\" value=\"${valueString v}\"/>") settings
     );
 
   mkStylixTheme =
