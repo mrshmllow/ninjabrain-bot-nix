@@ -65,18 +65,18 @@ impl Base16 {
         // header background
         string += &Base16::tag_and_colour('b', self.base01);
         // result background
-        string += &Base16::tag_and_colour('c', self.base02);
+        string += &Base16::tag_and_colour('c', self.base01);
         // throws background
-        string += &Base16::tag_and_colour('d', self.base02);
+        string += &Base16::tag_and_colour('d', self.base01);
         // dividers
-        string += &Base16::tag_and_colour('e', self.base01);
+        string += &Base16::tag_and_colour('e', self.base00);
         // darker dividers
         string += &Base16::tag_and_colour('f', self.base00);
         // g skipped ?
         // foreground
         string += &Base16::tag_and_colour('h', self.base05);
         // title foreground
-        string += &Base16::tag_and_colour('n', self.base04);
+        string += &Base16::tag_and_colour('n', self.base05);
         // foreground (throws)
         string += &Base16::tag_and_colour('k', self.base05);
         // divine text
@@ -84,7 +84,7 @@ impl Base16 {
         // version text
         string += &Base16::tag_and_colour('j', self.base04);
         // "header text" (table headers)
-        string += &Base16::tag_and_colour('o', self.base05);
+        string += &Base16::tag_and_colour('o', self.base04);
         // good aka diff inserted
         string += &Base16::tag_and_colour('l', self.base0B);
         // bad aka diff deleted
