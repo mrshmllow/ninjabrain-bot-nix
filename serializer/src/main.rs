@@ -17,8 +17,7 @@ struct Base16 {
     base00: HexColor,
     #[serde(deserialize_with = "add_hash")]
     base01: HexColor,
-    #[serde(deserialize_with = "add_hash")]
-    base02: HexColor,
+    // base02: HexColor,
     // base03: HexColor,
     #[serde(deserialize_with = "add_hash")]
     base04: HexColor,
@@ -45,7 +44,11 @@ where
 {
     let s = String::deserialize(d)?;
 
-    format!("#{s}")
+    if s.starts_with('#') {
+        s
+    } else {
+        format!("#{s}")
+    }
         .parse::<HexColor>()
         .map_err(serde::de::Error::custom)
 }
