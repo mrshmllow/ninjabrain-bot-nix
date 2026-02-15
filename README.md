@@ -6,6 +6,24 @@ By default the package comes from [uku's mcsr-nixos flake](https://git.uku3lig.n
 
 The math to do with the "Location" of hotkeys was kind of confusing to implement and may be incorrect. If ninjabrain bot has weird hexadecimal values in place of the keys you expect please create an issue!!
 
+## Generating Base16 Ninjabrain-Bot Themes
+
+The following command will generate a ninjabrain-bot encoded theme string from any base16 theme yaml:
+
+```sh
+$ cat $(nix build nixpkgs#base16-schemes --print-out-paths --no-link)/share/themes/catppuccin-frappe.yaml \
+    | nix run nixpkgs#yq -- -y ".palette" \
+    | nix run https://tangled.org/althaea.zone/ninjabrain-bot-nix/archive/trunk#serializer
+```
+
+## Gallery
+
+![everforest theme](https://files.catbox.moe/exnsbv.png)
+
+![catppuccin theme](https://files.catbox.moe/famo0o.png)
+
+![gruvbox theme](https://files.catbox.moe/u263fq.png)
+
 ## Examples
 
 This can be used as a flake as:

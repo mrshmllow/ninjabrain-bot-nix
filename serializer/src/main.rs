@@ -49,8 +49,8 @@ where
     } else {
         format!("#{s}")
     }
-        .parse::<HexColor>()
-        .map_err(serde::de::Error::custom)
+    .parse::<HexColor>()
+    .map_err(serde::de::Error::custom)
 }
 
 impl Base16 {
